@@ -11,19 +11,9 @@ public class ScoreCard {
 
     private List<Round> rounds = new ArrayList<Round>();
 
-    public ScoreCard(String color) {
+    public ScoreCard(String color){
         this.color = color;
     }
 
-    public setRCorner(String boxerName) {
-        this.redCorner = boxerName;
-    }
-
-    public setBCorner(String boxerName) {
-        this.blueCorner = boxerName;
-    }
-
-    public getNumRounds(){
-        return (byte) this.rounds.size();
-    }
+    public
 }

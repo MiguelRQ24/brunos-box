@@ -1,6 +1,6 @@
 package edu.statuas.brunosbox;
 
-package edu.badpals.brunosbox;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
