@@ -125,5 +125,7 @@ public class BrunosBox
 
         whiteScoreCard.loadJudgeScoreCard(data[0]);
         System.out.println(whiteScoreCard);
+
+
     }
 }

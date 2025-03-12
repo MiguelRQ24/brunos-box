@@ -11,11 +11,15 @@ public class RegularRound implements Round{
         this.roundScore = roundScore;
     }
 
+    @Override
     public byte getRedBoxerScore() {
+        boxerRoundScore();
         return redBoxerScore;
     }
 
+    @Override
     public byte getBlueBoxerScore() {
+        boxerRoundScore();
         return blueBoxerScore;
     }
 

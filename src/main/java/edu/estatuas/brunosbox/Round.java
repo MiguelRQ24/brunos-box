@@ -5,4 +5,6 @@ public interface Round {
     byte blueBoxerScore = 0;
 
     void boxerRoundScore();
+    byte getRedBoxerScore();
+    byte getBlueBoxerScore();
 }

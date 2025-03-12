@@ -5,7 +5,8 @@ public class ScoreCard {
     private String rCorner;
     private String bCorner;
     private String[] judgeScoreCard;
-    int rounds;
+    Round[] rounds;
+    int numRounds;
     public ScoreCard(String color){
         this.color = color;
     }
@@ -30,21 +31,51 @@ public class ScoreCard {
         return color;
     }
 
-    public int getRounds() {
-        if (judgeScoreCard != null){ this.rounds = judgeScoreCard.length;}
-        return rounds;
+    public int getNumberOfRounds() {
+        if (judgeScoreCard != null){ this.numRounds = judgeScoreCard.length;}
+        return numRounds;
     }
 
     @Override
     public String toString() {
         return  "                     "/*4,5 tabs*/ + getColor() + "\n" +
                 "          "/*2,5 tabs*/ + getRCorner() + "    "/*4 espacios*/ + getBCorner() + "\n" +
-                "                   " + getRounds() + " Rounds" + "\n" +
+                "                   " + getNumberOfRounds() + " Rounds" + "\n" +
                 "Round    Total       ROUND       Total    Round" + "\n" +
-                "Score    Score                   Score    Score";
+                "Score    Score                   Score    Score" + "\n" +
+                viewRounds();
     }
 
     void loadJudgeScoreCard(String[] judgeScoreCard){
         this.judgeScoreCard = judgeScoreCard;
+        setRounds(judgeScoreCard);
+    }
+
+    private void setRounds(String[] judgeScoreCard) {
+        int i = 0;
+        rounds = new Round[judgeScoreCard.length];
+        for (String roundPuntuation: judgeScoreCard){
+            Round round = new RegularRound(roundPuntuation);
+            rounds[i] = round;
+            i++;
+        }
+
+    }
+    String viewRounds(){
+        if (rounds == null){return "";}
+        StringBuilder results = new StringBuilder();
+        int redTotalPoints = 0;
+        int blueTotalPoints = 0;
+        for (Round round: rounds){
+            results.append(
+                            round.getRedBoxerScore() + "\t\t\s" + (redTotalPoints += round.getRedBoxerScore()) +
+                            "\t\t\s\s\s\s" +
+                            round.getRedBoxerScore() + " - " + round.getBlueBoxerScore() +
+                            "\t\t\s" +
+                            (blueTotalPoints += round.getBlueBoxerScore())+ "\t\t\s" + round.getBlueBoxerScore()  + "\n"
+                            );
+        }
+
+        return results.toString();
     }
 }
