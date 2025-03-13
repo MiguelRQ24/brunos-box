@@ -2,6 +2,7 @@ package edu.statuas.brunosbox;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import edu.estatuas.ScoreCard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,8 @@ public class ScoreCardTest {
 
     private ScoreCard card;
 
-    private String[] whiteScoreCard =  {"9 - 10",
+    private String[] whiteScoreCard =  {
+            "9 - 10",
             "9 - 10",
             "9 - 10",
             "9 - 10",

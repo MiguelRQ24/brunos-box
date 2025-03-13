@@ -2,8 +2,7 @@ package edu.estatuas;
 
 import com.github.freva.asciitable.AsciiTable;
 
-public class Brunosbox
-{
+public class Brunosbox {
  public static void main( String[] args ) {
 
   System.out.println("\n - I see three of them out there." +
@@ -15,7 +14,7 @@ public class Brunosbox
   String[][] data = {
 
           //  White ScoreCard
-          {"9 - 10",
+          {       "9 - 10",
                   "9 - 10",
                   "9 - 10",
                   "9 - 10",
@@ -27,7 +26,7 @@ public class Brunosbox
                   "9 - 10"},
 
           // Blue ScoreCard
-          {"9 - 10",
+          {       "9 - 10",
                   "9 - 10",
                   "9 - 10",
                   "8 - 10", // knockdown
@@ -39,7 +38,7 @@ public class Brunosbox
                   "10 - 9"},
 
           // Pink ScoreCard
-          {"9 - 10",
+          {       "9 - 10",
                   "9 - 10",
                   "9 - 10",
                   "1, 8 - 10", // referee point deduction
@@ -67,6 +66,53 @@ public class Brunosbox
   /*
    * Asigna el nombre de los pugiles
    * Rocky Balboa (red) vs Apollo Creed (blue)
+   */
+  whiteScoreCard.setRcorner("Rocky Balboa");
+  whiteScoreCard.setBcorner("Apollo Creed");
+
+
+  System.out.println(whiteScoreCard);
+
+  /*
+   * Crea una clase llamada RegularRound
+   * que implemente la interfaz Round.
+   *
+   * Crea un round del tipo "10 - 9" o "9 - 10".
+   * Muestra la puntuación obtenida por
+   * cada boxeador.
+   *
+   * En Round la puntuacion se almacena
+   * como un número entero, no como un String.
+   *
+   * Pasa el caso test que propongo.
+   */
+
+  RegularRound round = new RegularRound("10 - 9");
+  System.out.println("\n\t Regular round\t" + round.getRedBoxerScore() +
+          " - " + round.getBlueBoxerScore());
+  /*
+   * Carga en la tarjeta blanca
+   * los puntos de todos los rounds
+   * de la primera tarjeta del array data.
+   *
+   * Cada round es un objeto del tipo RegularRound.
+   * La tarjeta blanca es una colección de objetos
+   * de tipo Round.
+   *
+   * Al mostrar la tarjeta se observan los
+   * puntos obtenidos por cada pugil en cada round.
+   * Se llaman round score.
+   */
+
+  /*
+   * Calcula el final score o puntuación total
+   * de cada pugil y muestralo en la tarjeta.
+   */
+
+  /*
+   * Calcula los puntos acumulados en cada
+   * round de cada pugil y muestralo en la tarjeta.
+   * Se llaman score total.
    */
 
  }

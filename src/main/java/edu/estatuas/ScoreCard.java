@@ -1,5 +1,11 @@
 package edu.estatuas;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
 public class ScoreCard {
 
     private final String color;
@@ -15,5 +21,29 @@ public class ScoreCard {
         this.color = color;
     }
 
-    public
+    public void setRcorner(String redCorner){
+        this.redCorner=boxerName;
+    }
+
+    public void setBcorner(String blueCorner){
+        this.blueCorner=boxerName;
+    }
+    public getNumRounds(){
+        return (byte) this.rounds.size();
+    }
+
+    private void setJudgeScoreCard(String[] scoreCard) {
+        this.judgeScoreCard = scoreCard;
+    }
+
+    private void addRound(Round round){
+        this.rounds.add(round);
+    }
+    public List<Round> getRounds() {
+        return Collections.unmodifiableList(this.rounds);
+    }
+
+    private void addRound(Round round) {
+        this.rounds.add(round);
+    }
 }
