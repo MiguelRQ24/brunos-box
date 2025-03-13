@@ -1,5 +1,8 @@
 package edu.estatuas.brunosbox;
 
+
+import static edu.estatuas.brunosbox.RoundFactory.getRound;
+
 public class ScoreCard {
     private final String color;
     private String rCorner;
@@ -55,7 +58,7 @@ public class ScoreCard {
         int i = 0;
         rounds = new Round[judgeScoreCard.length];
         for (String roundPuntuation: judgeScoreCard){
-            Round round = new RegularRound(roundPuntuation);
+            Round round = getRound(roundPuntuation);
             rounds[i] = round;
             i++;
         }
