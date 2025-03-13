@@ -78,7 +78,7 @@ public class ScoreCard {
                             (blueTotalPoints += round.getBlueBoxerScore())+ "\t\t\s" + round.getBlueBoxerScore()  + "\n"
                             );
         }
-        results.append("FINAL SCORE:" + redTotalPoints + "-" + blueTotalPoints + "FINAL SCORE");
+        results.append("FINAL SCORE: \t" + redTotalPoints + "  -  " + blueTotalPoints + "\tFINAL SCORE");
         return results.toString();
     }
 }
