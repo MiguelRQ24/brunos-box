@@ -37,5 +37,8 @@ public class RegularRound implements Round{
         this.blueBoxerScore = Byte.parseByte(blueScore.trim());
     }
 
-
+    @Override
+    public String toString(){
+        return this.roundScore;
+    }
 }
