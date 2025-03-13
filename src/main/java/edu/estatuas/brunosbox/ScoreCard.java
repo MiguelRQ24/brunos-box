@@ -75,11 +75,10 @@ public class ScoreCard {
                             "\t\t\s\s\s\s" +
                             round.getRedBoxerScore() + " - " + round.getBlueBoxerScore() +
                             "\t\t\s" +
-                            (blueTotalPoints += round.getBlueBoxerScore())+ "\t\t\s" + round.getBlueBoxerScore()  + "\n" +
-                            "FINAL SCORE:" + redTotalPoints + "-" + blueTotalPoints + "FINAL SCORE"
+                            (blueTotalPoints += round.getBlueBoxerScore())+ "\t\t\s" + round.getBlueBoxerScore()  + "\n"
                             );
         }
-
+        results.append("FINAL SCORE:" + redTotalPoints + "-" + blueTotalPoints + "FINAL SCORE");
         return results.toString();
     }
 }
