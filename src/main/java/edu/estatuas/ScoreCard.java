@@ -1,7 +1,6 @@
 package edu.estatuas;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -28,7 +27,7 @@ public class ScoreCard {
     public void setBcorner(String blueCorner){
         this.blueCorner=boxerName;
     }
-    public getNumRounds(){
+    public byte getNumRounds(){
         return (byte) this.rounds.size();
     }
 
@@ -45,5 +44,26 @@ public class ScoreCard {
 
     private void addRound(Round round) {
         this.rounds.add(round);
+    }
+
+    @Override
+    public String toString() {
+        return "\n\t\t\t   " + this.color
+                + "\n\t\t" + this.blueCorner
+                + "\t" + this.redCorner
+                + "\n\t\t\t"
+                + this.getNumRounds() + " rounds\n"
+                + this.viewRounds()
+                + "\n\t FINAL SCORE: "
+                + this.getRedBoxerFinalScore()
+                + " - "
+                + this.getBlueBoxerFinalScore()
+                + " FINAL SCORE";
+    }
+
+    public void loadJudgeScoreCard(String[] judgeScoreCard){
+        this.loadJudgeScoreCard(judgeScoreCard);
+
+
     }
 }

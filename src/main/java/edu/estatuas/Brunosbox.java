@@ -2,7 +2,7 @@ package edu.estatuas;
 
 import com.github.freva.asciitable.AsciiTable;
 
-public class Brunosbox {
+public class Brunosbox{
  public static void main( String[] args ) {
 
   System.out.println("\n - I see three of them out there." +
@@ -114,6 +114,6 @@ public class Brunosbox {
    * round de cada pugil y muestralo en la tarjeta.
    * Se llaman score total.
    */
-
  }
+
 }
