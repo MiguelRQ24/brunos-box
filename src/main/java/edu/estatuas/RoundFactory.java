@@ -7,7 +7,7 @@ public class RoundFactory {
             return null;
         }
 
-        if(roundScore.equalsIgnoreCase("9 - 10") || (roundScore.equalsIgnoreCase("10 - 9")){
+        if(roundScore.equalsIgnoreCase("9 - 10") || (roundScore.equalsIgnoreCase("10 - 9"))){
                     return new RegularRound(roundScore);
         }
         else if (roundScore.equalsIgnoreCase("10 - 8") || roundScore.equalsIgnoreCase("8 - 10")) {
@@ -21,5 +21,4 @@ public class RoundFactory {
     }
 }
 
-    }
-}
+

@@ -42,9 +42,7 @@ public class ScoreCard {
         return Collections.unmodifiableList(this.rounds);
     }
 
-    private void addRound(Round round) {
-        this.rounds.add(round);
-    }
+
 
     @Override
     public String toString() {

@@ -113,7 +113,16 @@ public class Brunosbox{
    * Calcula los puntos acumulados en cada
    * round de cada pugil y muestralo en la tarjeta.
    * Se llaman score total.
-   */
+  */
+
+  whiteScoreCard.loadJudgeScoreCard(data[0]);
+  System.out.println(whiteScoreCard);
+
+
+
+
+
  }
+
 
 }

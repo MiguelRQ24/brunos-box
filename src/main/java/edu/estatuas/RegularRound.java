@@ -13,6 +13,20 @@ class RegularRound implements Round {
     String getRoundScore() {
         return this.roundScore;
     }
+    @Override
+    public byte getRedBoxerScore() {
+        return this.redBoxerScore;
+    }
+
+    @Override
+    public byte getBlueBoxerScore() {
+        return this.blueBoxerScore;
+    }
+
+    @Override
+    public String toString() {
+        return this.getRedBoxerScore() + " - " + this.getBlueBoxerScore();
+    }
 
 
 }
